@@ -60,11 +60,9 @@ function getsigninfo() {
     }
   }
     url.body=`{"uin":"2297810074","QYY":2,"qua":"V1_IPH_SQ_8.4.5_1_APP_A","loc": {"lat":33880089,"lon":115818398}}`
-  url.headers['Host'] = 'ti.qq.com'
-  url.headers['Origin'] = 'https://ti.qq.com'
+  
   url.headers['Content-Type'] = 'application/json;charset=utf-8'
-  url.headers['Accept'] = 'application/json, text/plain, */*'
-  url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/17F75 QQ/8.4.5.626 V1_IPH_SQ_8.4.5_1_APP_A Pixel/1080 MiniAppEnable SimpleUISwitch/0 QQTheme/1000 Core/WKWebView Device/Apple(iPhone 7Plus) NetType/WIFI QBWebViewType/1 WKType/1'
+  
  
 
 
@@ -77,9 +75,10 @@ function getsigninfo() {
     let result = JSON.parse(data)
     jituto.log('aaaaaa')
     jituto.log(result)
-    if (result.data.retcode = 0) {detail = `今日标签: ${result.data.vecSignInfo.value.signInOutLook.title},   说明: ${result.data.vecSignInfo.value.signInOutLook.buttonDoc}`}
+    if (result.data.retcode = 0) {detail = `今日标签: ${result.data.vecSignInfo.value[0].signInOutLook.title},   说明: ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc}  ${result.data.vecSignInfo.value[0].signInOutLook.url}`}
     
-    jituto.msg(title, `${subTitle}${result.data.vecSignInfo.value.signInOutLook.collCard.shareTxt}`, detail)
+    jituto.msg(title, subTitle, detail)
+    jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
     
   })
 }
