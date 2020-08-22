@@ -32,7 +32,7 @@ function sign() {
     // 签到成功
     if (result.data.retCode = 0) {
       let subTitle = `打卡结果: 成功`
-      let detail = `今日标签: ${result.data.title}, 说明: ${result.data.buttonDoc}`
+      let detail = `今日标签: ${result.data.signInOutLook.title}, 说明: ${data.signInOutLook.buttonDoc}`
       jituto.msg(title, subTitle, detail)
     }
     // 签到重复
@@ -78,7 +78,7 @@ function getsigninfo() {
     if (result.data.retcode = 0) {
      detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
     
-    jituto.msg(title, subTitle, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `)
+    jituto.msg(title, subTitle, detail)
     jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
     
   })
