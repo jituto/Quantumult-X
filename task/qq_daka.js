@@ -75,7 +75,7 @@ function getsigninfo() {
     let result = JSON.parse(data)
     jituto.log('aaaaaa')
     jituto.log(result)
-    if (result.data.retcode = 0) {detail = `今日标签: ${result.data.vecSignInfo.value[0].signInOutLook.title},   说明: ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc}  ${result.data.vecSignInfo.value[0].signInOutLook.url}`}
+    if (result.data.retcode = 0) {detail = `今日标签: ${result.data.vecSignInfo.value[0].signInOutLook.title},   说明: ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
     
     jituto.msg(title, subTitle, detail)
     jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
