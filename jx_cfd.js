@@ -4,7 +4,7 @@ Jituto
 
 [rewrite_local]
 #京喜财富岛 
-https://wqs\.jd\.com/$ url script-response-body https://raw.githubusercontent.com/jituto/Quantumult-X/new/master/jx_cfd.js
+https://wqs\.jd\.com/$ url script-response-body https://raw.githubusercontent.com/jituto/Quantumult-X/blob/master/jx_cfd.js
 
 hostname = wqs.jd.com
 Safari浏览器打开京喜财富岛活动地址自动脚本注入，点击脚本左下的执行按键就行了，很方便。
