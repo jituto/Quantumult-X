@@ -72,12 +72,15 @@ function getsigninfo() {
     
     let subTitle = `打卡结果: 成功 (重复打卡)`
     let detail = ``
+    let detail1=''
     let result = JSON.parse(data)
     jituto.log('aaaaaa')
     jituto.log(result)
-    if (result.data.retcode = 0) {detail = `今日标签: ${result.data.vecSignInfo.value[0].signInOutLook.title},   说明: ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
+    if (result.data.retcode = 0) {
+     detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}'   
+     detail1='${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
     
-    jituto.msg(title, subTitle, detail)
+    jituto.msg(title, subTitle, '今日标签: 'detail ',说明: 'detail1)
     jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
     
   })
