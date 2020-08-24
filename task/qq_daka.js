@@ -29,15 +29,19 @@ function sign() {
     let result = JSON.parse(data)
     jituto.log(result.data.retCode)
     let title = `${cookieName}`
+    let m=""
     // 签到成功
     if (result.data.retCode = 0) {
       let subTitle = `打卡结果: 成功`
-      let detail = `今日标签: ${result.data.signInOutLook.title}, 说明: ${data.signInOutLook.buttonDoc}`
-      jituto.msg(title, subTitle, detail)
+      
+      //let detail = `今日标签: ${result.data.signInOutLook.title}, 说明: ${data.signInOutLook.buttonDoc}`
+      //jituto.msg(title, subTitle, detail)
+      getsigninfo(m)
     }
     // 签到重复
     else if (result.data.retcode = 1) {
-     getsigninfo() 
+     let m="(重复打卡)"
+     getsigninfo(m) 
      jituto.log('重复')
     }
     // 签到失败
@@ -52,7 +56,7 @@ jituto.done()
 }
 
 
-function getsigninfo() {
+function getsigninfo(m) {
   let url = {
     url: `https://ti.qq.com/hybrid-h5/api/json/daily_attendance/SignInMainPage`,
     headers: {
@@ -70,7 +74,7 @@ function getsigninfo() {
   jituto.post(url, (error, response, data) => {
     let title = `${cookieName}`
     
-    let subTitle = `打卡结果: 成功 (重复打卡)`
+    let subTitle = `打卡结果: 成功`
     let detail = ``
     let result = JSON.parse(data)
     jituto.log('aaaaaa')
@@ -78,7 +82,7 @@ function getsigninfo() {
     if (result.data.retcode = 0) {
      detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
     
-    jituto.msg(title, subTitle, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `)
+    jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `)
     jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
     
   })
