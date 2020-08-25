@@ -67,10 +67,6 @@ function getsigninfo(m) {
   
   url.headers['Content-Type'] = 'application/json;charset=utf-8'
   
- 
-
-
-
   jituto.post(url, (error, response, data) => {
     let title = `${cookieName}`
     
@@ -81,9 +77,12 @@ function getsigninfo(m) {
     jituto.log(result)
     if (result.data.retcode = 0) {
      detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
+    let option1={"openurl":${result.data.vecSignInfo.value[0].signInCover.materialStyle.prelayer}}
+    let option2={"openurl":${result.data.vecSignInfo.value[0].signInOutLook.url}}
+
     
-    jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `)
-    jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`)
+    jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `,option2)
+    jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`,option1)
     
   })
 }
