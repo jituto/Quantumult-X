@@ -77,8 +77,8 @@ function getsigninfo(m) {
     jituto.log(result)
     if (result.data.retcode = 0) {
      detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
-    let option1={"media-url":${result.data.vecSignInfo.value[0].signInCover.materialStyle.prelayer}}
-    let option2={"openurl":${result.data.vecSignInfo.value[0].signInOutLook.buttonJumpUrl},"media-url":${result.data.vecSignInfo.value[0].signInOutLook.url}}
+    let option1={"media-url":`${result.data.vecSignInfo.value[0].signInCover.materialStyle.prelayer}`}
+    let option2={"openurl":`${result.data.vecSignInfo.value[0].signInOutLook.buttonJumpUrl}`,"media-url":`${result.data.vecSignInfo.value[0].signInOutLook.url}`}
 
     
     jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `,option2)
@@ -103,9 +103,9 @@ function init() {
     if (isSurge()) return $persistentStore.write(key, val)
     if (isQuanX()) return $prefs.setValueForKey(key, val)
   }
-  msg = (title, subtitle, body) => {
+  msg = (title, subtitle, body，option) => {
     if (isSurge()) $notification.post(title, subtitle, body)
-    if (isQuanX()) $notify(title, subtitle, body)
+    if (isQuanX()) $notify(title, subtitle, body,option)
   }
   log = (message) => console.log(message)
   get = (url, cb) => {
