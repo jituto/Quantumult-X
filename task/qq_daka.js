@@ -77,8 +77,8 @@ function getsigninfo(m) {
     jituto.log(result)
     if (result.data.retcode = 0) {
      detail = `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `}
-    let option1={"openurl":${result.data.vecSignInfo.value[0].signInCover.materialStyle.prelayer}}
-    let option2={"openurl":${result.data.vecSignInfo.value[0].signInOutLook.url}}
+    let option1={"media-url":${result.data.vecSignInfo.value[0].signInCover.materialStyle.prelayer}}
+    let option2={"openurl":${result.data.vecSignInfo.value[0].signInOutLook.buttonJumpUrl},"media-url":${result.data.vecSignInfo.value[0].signInOutLook.url}}
 
     
     jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `,option2)
