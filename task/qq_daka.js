@@ -103,7 +103,7 @@ function init() {
     if (isSurge()) return $persistentStore.write(key, val)
     if (isQuanX()) return $prefs.setValueForKey(key, val)
   }
-  msg = (title, subtitle, body，option) => {
+  msg = (title, subtitle, body,option) => {
     if (isSurge()) $notification.post(title, subtitle, body)
     if (isQuanX()) $notify(title, subtitle, body,option)
   }
