@@ -81,7 +81,7 @@ function getsigninfo(m) {
     let option2={"openurl":`${result.data.vecSignInfo.value[0].signInOutLook.buttonJumpUrl}`,"media-url":`${result.data.vecSignInfo.value[0].signInOutLook.url}`}
 
     
-    jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `,option2)
+    //jituto.msg(title, `${subTitle}${m}`, `${result.data.vecSignInfo.value[0].signInOutLook.title}  ${result.data.vecSignInfo.value[0].signInOutLook.buttonDoc} `,option2)
     jituto.msg(`${result.data.vecSignInfo.value[0].signInCover.title}  ${result.data.vecSignInfo.value[0].signInCover.subTitle}`, `${result.data.vecSignInfo.value[0].signInCover.projTitle}  ${result.data.vecSignInfo.value[0].signInCover.projInfo}`, `${result.data.vecSignInfo.value[0].signInOutLook.collCard.shareTxt}`,option1)
     
   })
