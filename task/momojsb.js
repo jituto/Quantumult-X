@@ -25,7 +25,7 @@ mit=mk.immomo.com
 //====================================
 const $iosrule = iosrule();
 
-const log=1;//设置0关闭日志,1开启日志
+const log=0;//设置0关闭日志,1开启日志
 
 //++++++++++++++++++++++++++++++++-
 
@@ -179,4 +179,7 @@ function iosrule() {
     }
     return { isRequest, isQuanX, isSurge, notify, write, read, get, post, end }
 };
+
+
+
 
