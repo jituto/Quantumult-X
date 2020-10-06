@@ -85,7 +85,7 @@ if(log==1)console.log(JSON.stringify(data))
 
 result2="签到成功";
 
-papa(momo,result1,result2);
+//papa(momo,result1,result2);
 
 })}
 
