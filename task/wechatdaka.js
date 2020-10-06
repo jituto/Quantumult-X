@@ -44,7 +44,7 @@ mit=www.2xtj7.cn,www.baimaa.com,www.hnmiaosu.cc,ph0001.hezyq.com,wq.02gk.com,dk.
 */
 
 const $iosrule = iosrule();
-const log=1;//设置0关闭日志,1开启日志
+const log=0;//设置0关闭日志,1开启日志
 const getck=1;//设置0关闭获取ck,1开启获取ck
 
 var mit=["www.2xtj7.cn","www.baimaa.com","www.hnmiaosu.cc","ph0001.hezyq.com","wq.02gk.com","dk.ne72.com","daka.isfx.cn"];
