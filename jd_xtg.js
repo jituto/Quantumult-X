@@ -58,7 +58,25 @@ const starID = [
   'haiermaoxiaotong',
 ];
 const shareID = [
-  '',
+  '2327ac98-c8a1-46df-b54b-6bcfd8972d5d',
+  'cbb43b5e-c8fb-4664-9070-ff2c9b9a7f95',
+  'baa15306-2bc7-47fb-95bf-8ffbcf3f622c',
+  'fea3db39-97d6-4da6-bec3-b4f3c51a85bb',
+  '68f9065d-65d0-490e-9d03-8cf6bdc13160',
+  '789b2d45-b7bc-4aec-9d07-081766264b69',
+  'f05d3512-4c0d-4600-8959-37b5a6fed957',
+  '3d614ad4-cba8-42cd-8f02-2149bb5fbabb',
+  'fa1a41ba-1425-4b4c-a583-f9647f7a54be',
+  '264003d0-ae58-4edc-95b4-a36a35ebcbcd',
+  'e4fb5d69-050a-4623-9908-96eaf7d75071',
+  '369c6957-9c6e-471b-bb6e-a61901adec1b',
+  '4587e5ff-b441-4451-b3ef-4d8b0557d5c2',
+  '9e8bd69e-acd8-45bb-bebf-c48793a0d31a',
+  '727ecc7b-8843-4609-8bba-b748fbc3161c',
+  '830f5661-b2a9-4281-8315-9744c2b2e43d',
+  'e4f7205c-5e61-4cac-ae2a-a01f3e3c637b',
+  '2327ac98-c8a1-46df-b54b-6bcfd8972d5d',
+  'cbb43b5e-c8fb-4664-9070-ff2c9b9a7f95',
 ];
 const JD_API_HOST = 'https://urvsaggpt.m.jd.com/guardianstar';
 !(async () => {
