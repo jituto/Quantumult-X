@@ -1,7 +1,7 @@
 http=a2.ap.fastqvpn.com:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=吉
 http=a1.ap.fastqvpn.com:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=美国-纽约
 http=a3.ap.fastqvpn.com:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=哦
-http=a4.ap.fastqvpn.com:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=t.me/ThorHCC新加坡金沙湾节点
+http=a4.ap.fastqvpn.com:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=新加坡金沙湾节点
 http=Clubhouse.site:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=专用节点
 http=a1.er3.xyz:29980,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=香港铜锣湾节点
 http=ap1-sg.er3.xyz:29986,username=401326691240116224, password=ef8220dd-e338-4173-b03e-54c230642608, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=新加坡新达城节点
