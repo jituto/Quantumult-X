@@ -27,12 +27,7 @@ function sign() {
     if (result && result.code == 0) {
       let subTitle = `抽奖成功`
       i=result.data.trophyGrade
-      total =result.data.trophyGrade
-      while(i<10){
-        x()
-
-}
-      
+      total =result.data.trophyGrad
       let detail = `累计: ${total}个出发币, 说明: ${result.msg}`
       chavy.msg(title, subTitle, detail)
     }
