@@ -24,11 +24,21 @@ function sign() {
     let result = JSON.parse(data)
     let title = `${cookieName}`
     // 签到成功
-    if (result && result.code == 0) {
+    if (result && result.status == 0) {
       let subTitle = `抽奖成功`
-      i=result.data.trophyGrade
-      total =result.data.trophyGrad
-      let detail = `累计: ${total}个出发币, 说明: ${result.msg}`
+      if(result.data.trophyName=='谢谢参与')
+      {i=0}
+      else{
+      i=parseInt(result.data.trophyName)}
+      total =i
+      let x=1
+      let detail =  `说明: 第1次：${result.data.trophyName}`
+      while(i>10){
+      detail=x(detail,x)
+      total=total+i
+      x=x+1
+      }
+      detail=`累计: ${total}个出发币,`+detail
       chavy.msg(title, subTitle, detail)
     }
     // 签到重复
@@ -41,7 +51,7 @@ function sign() {
     chavy.done()
   })
 }
-function x() {
+function x(detail,x) {
   let url = {
     url: `https://erp.level8.com.cn:11443//miniProgram/api/trophy/get?token=31bbdae1dfc640b78e2ddb23af9979b3`,
     headers: {
@@ -56,12 +66,20 @@ function x() {
   chavy.get(url, (error, response, data) => {
     
     let result = JSON.parse(data)
-    if (result && result.code == 0) {
-    i=result.data.trophyGrade,
-    total = total+result.data.trophyGrade}
+    if (result && result.status == 0) {
+    if(result.data.trophyName=='谢谢参与')
+      {i=0}
+      else{
+      i=parseInt(result.data.trophyName)}
+    a=x+1
+    
+    }
     else
       {i=0}
   })
+  detail=detail+`|第${a}次：${result.data.trophyName}`
+  chavy.log(`${cookieName}, data: ${data}`)
+  return detail
 }
 function init() {
   isSurge = () => {
@@ -106,3 +124,5 @@ function init() {
   }
   return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, done }
 }
+
+
