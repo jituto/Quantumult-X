@@ -23,6 +23,7 @@ function sign() {
   chavy.get(url, (error, response, data) => {
     let result = JSON.parse(data)
     let title = `${cookieName}`
+    chavy.log(`${cookieName}, data: ${data}`)
     // 签到成功
     if (result && result.status == 0) {
       let subTitle = `抽奖成功`
@@ -47,7 +48,7 @@ function sign() {
       let detail = `说明: ${result.msg}`
       chavy.msg(title, subTitle, detail)
     }
-    chavy.log(`${cookieName}, data: ${data}`)
+    
     chavy.done()
   })
 }
@@ -66,6 +67,7 @@ function x(detail,x) {
   chavy.get(url, (error, response, data) => {
     
     let result = JSON.parse(data)
+    chavy.log(`${cookieName}, data: ${data}`)
     if (result && result.status == 0) {
     if(result.data.trophyName=='谢谢参与')
       {i=0}
